@@ -15,4 +15,4 @@ if [[ -z "$PROJECT_FLASH" || "$PROJECT_FLASH" == "0" ]]; then
 fi
 
 # remove "branch-*-latest" tag to keep conda from using that tag
-git -d ${SOURCE_BRANCH}-latest
+git tag -d ${SOURCE_BRANCH}-latest
