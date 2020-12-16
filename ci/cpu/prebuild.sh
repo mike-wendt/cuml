@@ -16,5 +16,5 @@ fi
 
 # remove "branch-*-latest" tag to keep conda from using that tag
 if [[ "$TARGET_BRANCH" = branch-* ]] ; then
-  git tag | grep branch-*-latest | xargs git tag -d
+  git tag | grep -E "branch-.*-latest" | xargs git tag -d
 fi
